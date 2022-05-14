@@ -1,8 +1,23 @@
 <script setup>
+import Button from './Button.vue';
 
 defineProps({
-    btn: String,
-    to: String
+    btnBgColor: {
+        type: String,
+        required: true,
+    },
+    btnColor: {
+        type: String,
+        required: true,
+    },
+    btnShadow: {
+        type: String,
+        required: true,
+    },
+    to: {
+        type : String,
+        required: true,
+    },
 })
 
 </script>
@@ -10,13 +25,11 @@ defineProps({
 <template>
     <section>
         <div>
-            <h2 class="">
+            <h2>
                 <slot></slot>
             </h2>
             <router-link :to="to">
-                <button>
-                    EXPLORER
-                </button>
+                <Button :style="'background-color:'+btnBgColor+';box-shadow:'+btnShadow+' 2px 2px 0 0,black 1px 1px 0 1px;color:'+btnColor+';'">EXPLORER</Button>
             </router-link>
         </div>
     </section>
@@ -26,7 +39,7 @@ defineProps({
 h2,
 button {
     margin: 8px 0px;
-    color: white;
+    color: #fff;
 }
 section {
     display: flex;
@@ -40,7 +53,7 @@ section>div{
 button {
     border: 1px solid transparent;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-weight: bold;
 }
 
