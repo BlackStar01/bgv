@@ -57,7 +57,7 @@ defineProps({
                     <br><br>
                     <Button
                         :style="'background-color:' + btnBgColor + ';box-shadow:' + btnShadow + ' 2px 2px 0 0,black 1px 1px 0 1px;color:' + btnColor + ';'">
-                        Nous contacter 
+                        Nous contacter
                     </Button>
                 </div>
             </div>
@@ -102,6 +102,7 @@ nav {
     left: 10%;
     width: 40%;
 }
+
 .right {
     position: absolute;
     right: 50px;
@@ -117,5 +118,32 @@ nav {
     display: inline-block;
     margin: 0.15em;
     position: relative;
+}
+
+@media (max-width:720px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        position: relative;
+        top: 8%;
+    }
+
+    .left {
+        position: relative;
+        width: 85%;
+    }
+
+    .right {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
 }
 </style>

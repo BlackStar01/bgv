@@ -10,10 +10,6 @@
     --desktop: 769px;
 }
 
-@media screen and (max-width: 768px) {
-
-}
-
 @media screen and (min-width: 769px) {
     h2 {
         font-weight: 100;

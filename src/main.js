@@ -3,10 +3,10 @@ import App from "./App.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./views/Home.vue";
 import NotFound from "./views/NotFound.vue";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { MotionPlugin } from "@vueuse/motion";
 
 library.add(faPhone);
 
@@ -35,4 +35,4 @@ const router = createRouter({
   routes,
 });
 
-createApp(App).component("fa", FontAwesomeIcon).use(router).mount("#app");
+createApp(App).component("fa", FontAwesomeIcon).use(router).use(MotionPlugin).mount("#app");
