@@ -13,7 +13,7 @@ import { ref } from 'vue';
 .button-50 {
   appearance: button;
   background-image: none;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
@@ -42,7 +42,7 @@ import { ref } from 'vue';
 }
 
 .button-50:not([disabled]):active {
-  box-shadow: #fff 1px 1px 0 0, #000 1px 1px 0 1px;
+  box-shadow: #fff 1px 1px 0 0, #ccc 1px 1px 0 1px;
   transform: translate(2px, 2px);
 }
 

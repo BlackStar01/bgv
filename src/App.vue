@@ -17,7 +17,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-#app {
+#app, button, input, textarea {
   font-family: 'Century Gothic', Avenir, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

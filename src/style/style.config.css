@@ -5,6 +5,7 @@
     --blue : rgba(8,33,50, 1);
     --bluesoft : rgba(5, 58, 93, 0.867);
 
+    /* Breakpoints for responsive */
     --mobile : 768px;
     --desktop: 769px;
 }
