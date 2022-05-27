@@ -1,10 +1,15 @@
 <script setup>
 import { ref } from 'vue';
-
+defineProps({
+  btnType: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <template>
-    <button class="button-50" role="button">
+    <button :type="btnType" class="button-50" role="button">
         <slot></slot>
     </button>
 </template>
@@ -13,7 +18,7 @@ import { ref } from 'vue';
 .button-50 {
   appearance: button;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid orangered;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;

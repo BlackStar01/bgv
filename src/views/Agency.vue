@@ -12,15 +12,15 @@ import Foot from '../components/Foot.vue';
   <div>
     <Header btnBgColor="var(--orange)" btnColor="var(--blue)" btnShadow="var(--orangesoft)">
     </Header>
-    <About v-motion-slide-visible-right title="À propos" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nostrum provident animi voluptatem sapiente. 
+    <About v-motion-slide-visible-bottom title="À propos" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nostrum provident animi voluptatem sapiente. 
         A recusandae quidem autem assumenda animi velit impedit, quam ut iste! A earum dicta sapiente vitae!"
         src="src/assets/about.png">
     </About>  
-    <!--<Team v-motion-slide-visible-right condition="team"></Team>
-    <Team v-motion-slide-visible-right></Team>
-    <Services v-motion-slide-visible-right title="Services"></Services>
-    <Form v-motion-slide-visible-right></Form>
-    <Foot v-motion-slide-visible-right></Foot> -->
+    <Team v-motion-slide-visible-bottom condition="team"></Team>
+    <Team v-motion-slide-visible-bottom condition="none"></Team>
+    <Services v-motion-slide-visible-bottom title="Services"></Services>
+    <Form v-motion-slide-visible-bottom></Form>
+    <Foot v-motion-slide-visible-top></Foot>
   </div>
 </template>
 

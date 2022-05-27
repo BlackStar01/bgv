@@ -20,12 +20,12 @@ const routes = [
   {
     path: "/agency",
     name: "agency",
-    component: import("./views/Agency.vue"),
+    component: () => import("./views/Agency.vue"),
   },
   {
     path: "/gv",
     name: "good-vibes",
-    component: import('./views/GoodVibes.vue'),
+    component: () => import('./views/GoodVibes.vue'),
   },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];

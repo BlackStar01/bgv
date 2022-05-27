@@ -30,7 +30,7 @@ defineProps({
     </div>
 </template>
 
-<style lang="css" scoped>
+<style scoped>
 .about {
     padding: 30px 0px;
     display: grid;
@@ -38,14 +38,17 @@ defineProps({
     width: 70%;
     margin: auto;
 }
+
 .left {
     position: relative;
 }
+
 .left-content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .right {
     display: flex;
     flex-direction: row;
@@ -56,5 +59,36 @@ defineProps({
 .right img {
     width: 400px;
     margin: auto;
+}
+
+@media (max-width:720px) {
+    .about {
+        padding: 30px 0px;
+        display: flex;    
+        flex-flow: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .left {
+        position: relative;
+        order: 2; /* May not ba supported by new browsers */
+    }
+
+    .left-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .right {
+        order: 1;
+        margin-bottom: 100px;
+    }
+
+    .right img {
+        width: 200px;
+        margin: auto;
+    }
 }
 </style>

@@ -79,25 +79,53 @@ const partners = ref([
 
 
 <style lang="css" scoped>
-.team{
+.team {
     padding: 30px 0px;
     width: 70%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.partners{
+
+.partners {
     text-align: center;
     padding: 30px;
     width: 70%;
     margin: auto;
 }
+
 .partenerimg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+
 .partners img {
     width: 100%;
     padding: 10px;
+}
+
+@media (max-width:720px) {
+    .team {
+        padding: 50px 0px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partners {
+        text-align: center;
+        padding: 5px 0px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .partenerimg {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .partners img {
+        width: 100%;
+        padding: 10px;
+    }
 }
 </style>

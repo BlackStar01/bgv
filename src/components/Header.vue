@@ -56,6 +56,7 @@ defineProps({
                     </p>
                     <br><br>
                     <Button
+                        btn-type="button"
                         :style="'background-color:' + btnBgColor + ';box-shadow:' + btnShadow + ' 2px 2px 0 0,black 1px 1px 0 1px;color:' + btnColor + ';'">
                         Nous contacter
                     </Button>
@@ -126,7 +127,7 @@ nav {
         grid-template-columns: 1fr;
         text-align: center;
         position: relative;
-        top: 8%;
+        top: 1%;
     }
 
     .left {
@@ -139,7 +140,7 @@ nav {
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     h4 {

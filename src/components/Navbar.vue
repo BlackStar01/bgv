@@ -6,9 +6,9 @@
       </div>
 
       <ul v-show="!mobile" class="navigation">
-        <li><router-link class="link" to="/zd">Home</router-link></li>
-        <li><router-link class="link" to="/f">About</router-link></li>
-        <li><router-link class="link" to="/gr">Protfolio</router-link></li>
+        <li><router-link class="link" to="/zd">Accueil</router-link></li>
+        <li><router-link class="link" to="/f">Partenaires</router-link></li>
+        <li><router-link class="link" to="/gr">Services</router-link></li>
         <li><router-link class="link" to="/e">Contact</router-link></li>
       </ul>
       <div class="icon">

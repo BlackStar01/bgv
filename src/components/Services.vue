@@ -47,7 +47,7 @@ const showService = (index) => {
         </CardService>
 
         <About :title="activeService.title" :text="activeService.text" :src="activeService.img_2"></About>
-        
+
     </div>
 </template>
 
@@ -57,7 +57,23 @@ const showService = (index) => {
     width: 70%;
     margin: auto;
 }
+
 .about {
     width: 100% !important;
+}
+
+@media (max-width:720px) {
+    .services {
+        text-align: center;
+        padding: 30px 0px;
+        width: 100%;
+        margin: auto;
+    }
+    .img {
+        display: none;
+    }
+    .about {
+        width: 100% !important;
+    }
 }
 </style>

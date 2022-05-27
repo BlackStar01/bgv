@@ -1,10 +1,10 @@
 <script setup>
 defineProps({
-    job : {
+    job: {
         type: String,
         required: true
     },
-    name : {
+    name: {
         type: String,
         required: true
     }
@@ -16,20 +16,33 @@ defineProps({
         <div class="img">
             <img src="../assets/person.jpg" alt="user">
         </div>
-        <h3> {{job}} </h3>
-        <small> {{name}} </small>
+        <h3> {{ job }} </h3>
+        <small> {{ name }} </small>
     </div>
 </template>
 
 <style lang="css" scoped>
-    .card
-    {
-        padding: 20px;
+.card {
+    padding: 20px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+@media (max-width:720px) {
+    .card {
+        padding: 20px 0px;
+        text-align: center;
     }
     img {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border: 1px solid transparent;
         border-radius: 50%;
     }
+}
 </style>

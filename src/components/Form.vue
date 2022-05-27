@@ -1,5 +1,31 @@
 <script setup>
+import { reactive, computed } from 'vue';
 import ButtonVue from './Button.vue';
+
+const formData = reactive({
+    name: '',
+    tel: '',
+    email: '',
+    message: ''
+})
+
+const validateEmail = computed(() => {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
+        console.log('true')
+        return 'true'
+    }
+    return 'false'
+
+})
+
+const checkForm = computed(() => {
+
+    console.log(validateEmail.value)
+    return false
+
+})
+
+/* Problem with form send ... in the console ... */
 </script>
 
 <template>
@@ -13,12 +39,14 @@ import ButtonVue from './Button.vue';
                     similique maiores explicabo optio totam. </small>
             </div>
         </div>
-        <form action="">
-            <input type="text" placeholder="Nom et prénom">
-            <input type="tel" placeholder="+229 12 57 48 52">
-            <input type="email" placeholder="exemple@gmail.com">
-            <textarea name="" id="" rows="4" placeholder="Votre message ..."></textarea>
-            <ButtonVue :style="'background-color: var(--orangesoft);'"> Envoyer </ButtonVue>
+        <form action="" @submit.prevent="checkForm" method="post" novalidate="true">
+            <input v-model="formData.name" type="text" placeholder="Nom et prénom">
+            <input v-model="formData.tel" type="tel" placeholder="+229 12 57 48 52">
+            <input v-model="formData.email" @blur="validateEmail" type="email" placeholder="exemple@gmail.com">
+            <textarea v-model="formData.message" id="" rows="4" placeholder="Votre message ..."></textarea>
+            <ButtonVue :btn-type="'submit'"
+                :style="'background-color: var(--orange);box-shadow: var(--orangesoft) 2px 2px 0 0,black 1px 1px 0 1px;'">
+                Envoyer </ButtonVue>
         </form>
     </div>
 </template>
@@ -31,17 +59,20 @@ import ButtonVue from './Button.vue';
     width: 70%;
     margin: auto;
 }
+
 .left {
     position: relative;
     width: 90%;
     margin: auto;
 
 }
+
 .left-content {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
+
 input,
 textarea {
     font-size: 12px;
@@ -60,5 +91,32 @@ textarea:hover,
 textarea:active {
     border: 1px solid var(--orange);
     color: black;
+}
+
+@media (max-width:720px) {
+    .form {
+        display: block;
+        padding-top: 130px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .left {
+        position: relative;
+        width: 92%;
+        text-align: center;
+    }
+
+    .left-content {
+        position: relative;
+        transform: translateY(-15%);
+    }
+
+    form {
+        width: 90%;
+        margin: auto;
+    }
+
+
 }
 </style>
