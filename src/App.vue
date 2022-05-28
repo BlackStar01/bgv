@@ -17,6 +17,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+html
+{
+  scroll-behavior: smooth;
+}
 #app, button, input, textarea {
   font-family: 'Century Gothic', Avenir, sans-serif;
   -webkit-font-smoothing: antialiased;

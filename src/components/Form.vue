@@ -9,23 +9,21 @@ const formData = reactive({
     message: ''
 })
 
-const validateEmail = computed(() => {
+const validateEmail = () => {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
-        console.log('true')
-        return 'true'
+        return 1
     }
-    return 'false'
+    return 0
+}
 
-})
-
-const checkForm = computed(() => {
-
-    console.log(validateEmail.value)
+const checkForm = () => {
+    if(validateEmail() === 1)
+    {
+        return true
+    }
     return false
+}
 
-})
-
-/* Problem with form send ... in the console ... */
 </script>
 
 <template>
