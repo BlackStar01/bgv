@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, computed } from 'vue';
+import { reactive } from 'vue';
 import ButtonVue from './Button.vue';
 
 const formData = reactive({
@@ -90,6 +90,11 @@ textarea:active {
     border: 1px solid var(--orange);
     color: black;
 }
+
+input:focus, textarea:focus {
+    background-color: rgb(255, 255, 204);
+}
+
 
 @media (max-width:720px) {
     .form {

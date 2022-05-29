@@ -15,10 +15,21 @@ defineProps({
         required: true,
     },
     to: {
-        type : String,
+        type: String,
         required: true,
     },
 })
+const loadData = async () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                name: '',
+            })
+        }, 3000)
+    })
+}
+
+const loadedData = await loadData()
 
 </script>
 
@@ -26,10 +37,11 @@ defineProps({
     <section>
         <div>
             <h2>
-                <slot></slot>
+                <slot></slot> {{ loadedData.name }}
             </h2>
             <router-link :to="to">
-                <Button :style="'background-color:'+btnBgColor+';box-shadow:'+btnShadow+' 2px 2px 0 0,black 1px 1px 0 1px;color:'+btnColor+';'">EXPLORER</Button>
+                <Button btn-type="button"
+                    :style="'background-color:' + btnBgColor + ';box-shadow:' + btnShadow + ' 2px 2px 0 0,black 1px 1px 0 1px;color:' + btnColor + ';'">EXPLORER</Button>
             </router-link>
         </div>
     </section>
@@ -41,20 +53,22 @@ button {
     margin: 8px 0px;
     color: #fff;
 }
+
 section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-section>div{
+
+section>div {
     text-align: center;
 }
+
 button {
     border: 1px solid transparent;
     border-radius: 5px;
     padding: 15px 25px;
     font-weight: bold;
 }
-
 </style>
