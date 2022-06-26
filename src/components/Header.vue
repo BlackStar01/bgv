@@ -34,6 +34,15 @@ defineProps({
         type: String,
         required: true,
     },
+    sectionTitle: {
+        type: String,
+        required: true,
+    },
+    sectionDescription: {
+        type: String,
+        required: true,
+    },
+
 
 })
 
@@ -48,12 +57,9 @@ defineProps({
             <div class="left">
                 <div>
                     <h4> Bénin Good Vibes </h4>
-                    <h1> AGENCE </h1>
+                    <h1> {{sectionTitle}} </h1>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit blanditiis eum provident obcaecati
-                        dolore nemo suscipit, ab, optio vitae, neque voluptate in dignissimos corrupti error vero?
-                        Perferendis obcaecati consequatur quibusdam?
-                    </p>
+                    <p>{{ sectionDescription}}</p>
                     <br><br>
                     <Button
                         btn-type="button"

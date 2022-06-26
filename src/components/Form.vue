@@ -19,6 +19,7 @@ const validateEmail = () => {
 const checkForm = () => {
     if(validateEmail() === 1)
     {
+        console.log(formData)
         return true
     }
     return false

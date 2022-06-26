@@ -7,6 +7,7 @@
                     <li><a href="#">Nos services</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Termes & Conditions</a></li>
+                    <li><router-link class="link" :to="'/'+goto" style="color: var(--orange)"> PASSER À <slot></slot> </router-link></li>
                 </ul>
             </div>
             <div class="row">
@@ -18,6 +19,13 @@
 </template>
     
 <script setup>
+
+defineProps({
+    goto: {
+        type: String,
+        required: true
+    }
+})
 
 </script>
     

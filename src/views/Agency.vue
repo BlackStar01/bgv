@@ -17,7 +17,7 @@ const clickToTop = () => {
       <span id="progress-value">&#8593;</span>
     </div>
 
-    <Header btnBgColor="var(--orange)" btnColor="var(--blue)" btnShadow="var(--orangesoft)"></Header>
+    <Header btnBgColor="var(--orange)" btnColor="var(--blue)" btnShadow="var(--orangesoft)" sectionTitle="AGENCY" sectionDescription="Something tio fod"></Header>
     <About v-motion-slide-visible-bottom title="À propos" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nostrum provident animi voluptatem sapiente. 
         A recusandae quidem autem assumenda animi velit impedit, quam ut iste! A earum dicta sapiente vitae!"
       src="src/assets/about.png">
@@ -26,7 +26,7 @@ const clickToTop = () => {
     <Team v-motion-slide-visible-bottom condition="none"></Team>
     <Services v-motion-slide-visible-bottom title="Services"></Services>
     <Form id="contact" v-motion-slide-visible-bottom></Form>
-    <Foot v-motion-slide-visible-top></Foot>
+    <Foot v-motion-slide-visible-top :goto="'gv'"> GOOD VIBES </Foot>
 
   </div>
 </template>
